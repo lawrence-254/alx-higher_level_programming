@@ -3,6 +3,9 @@
 class Square:
  """Class representing a square"""
 
+ def __init__(self, size):
+  """Constructor for initializing the square with a size"""
+  self.size = size
  @property
  def size(self):
   """Getter method for retrieving the size of the square"""
