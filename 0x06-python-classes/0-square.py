@@ -1,9 +1,8 @@
 #!/usr/bin/python3
+"""Object square"""
 
-"""object square"""
 
 class Square:
-
- """this class does nothing hence"""
+ """This class does nothing hence"""
  pass
 
