@@ -3,6 +3,10 @@
 class Square:
  """A SQUARE"""
  def __init__(self, size=0):
+  """defines a squre
+  Args:
+   size(int): size property
+  """
   if not isinstance(size, int):
    raise TypeError("size must be an integer")
   elif size < 0:
