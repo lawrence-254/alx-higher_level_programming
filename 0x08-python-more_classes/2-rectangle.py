@@ -1,5 +1,4 @@
-#!/user/bin/python3
-#2-rectangle.py
+#!/usr/bin/python3
 """Defines a Rectangle with dimensions."""
 
 
@@ -10,8 +9,8 @@ class Rectangle:
         """Rectangle initialisation with dimension defined
 
         Args:
-            width(int):width is the shortest side measurements of the rectacle
-            height(int):the mesurement of the longer side
+            width(int):width is the shortest side of the rectangle
+            height(int):the longer side
         """
         self.width = width
         self.height = height
