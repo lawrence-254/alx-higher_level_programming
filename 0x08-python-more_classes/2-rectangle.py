@@ -2,6 +2,7 @@
 #2-rectangle.py
 """Defines a Rectangle with dimensions."""
 
+
 class Rectangle:
     """A rectangle class."""
 
@@ -33,7 +34,6 @@ class Rectangle:
     def height(self):
         """A get function for the width of the rectangle"""
         return (self.__height)
-
 
     @height.setter
     def height(self, value):
