@@ -20,7 +20,7 @@ class Rectangle:
         """A get function for the width of the rectangle"""
         return (self.__width)
 
-    @property.setter
+    @width.setter
     def width(self, value):
         """A set function for the width property that ensures it is an int"""
         if not isinstance(value, int):
@@ -35,11 +35,11 @@ class Rectangle:
         return (self.__height)
 
 
-    @property.setter
+    @height.setter
     def height(self, value):
         """Set method for the height property"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self.height = value
+        self.__height = value
