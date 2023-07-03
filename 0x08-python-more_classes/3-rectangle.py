@@ -1,3 +1,4 @@
+
 #!/usr/bin/python3
 """Defines a Rectangle with dimensions."""
 
@@ -18,12 +19,12 @@ class Rectangle:
 
     @property
     def width(self):
-        """A get function for the width of the rectangle"""
+        """A get function for the width of the rectangle."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """A set function for the width property that ensures it is an int"""
+        """A set function for the width property that ensures it is an int."""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -32,12 +33,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """A get function for the width of the rectangle"""
+        """A get function for the width of the rectangle."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Set method for the height property"""
+        """Set method for the height property."""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -45,17 +46,17 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Returns the area occupied by the rectangle"""
+        """Returns the area occupied by the rectangle."""
         return self.__width * self.__height
 
     def perimeter(self):
-        """Returns th total distance around the rectangle"""
+        """Returns th total distance around the rectangle."""
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
-        """print the rectangle with the character #"""
+        """print the rectangle with the character #."""
 
         if self.__width == 0 or self.__height == 0:
             return ""
