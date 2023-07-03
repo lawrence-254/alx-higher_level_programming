@@ -17,12 +17,12 @@ class Rectangle:
 
     @property
     def width(self):
-        """A getter for the width of the rectangle"""
+        """A get function for the width of the rectangle"""
         return (self.__width)
 
     @property.setter
     def width(self, value):
-        """A setter for the width property that ensures it is an int"""
+        """A set function for the width property that ensures it is an int"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -30,4 +30,16 @@ class Rectangle:
         self.__width = value
 
     @property
-    def height(self)
+    def height(self):
+        """A get function for the width of the rectangle"""
+        return (self.__height)
+
+
+    @property.setter
+    def height(self, value):
+        """Set method for the height property"""
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.height = value
