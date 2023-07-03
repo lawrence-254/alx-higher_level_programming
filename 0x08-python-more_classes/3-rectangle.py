@@ -16,6 +16,9 @@ class Rectangle:
         self.__width = width
         self.__height = height
 
+        if self.__width == 0 or self.__height == 0:
+            return (0)
+
     @property
     def width(self):
         """A get function for the width of the rectangle"""
