@@ -13,10 +13,10 @@ class Rectangle:
             width(int):width is the shortest side measurements of the rectacle
             height(int):the mesurement of the longer side
         """
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
-        if self.__width == 0 or self.__height == 0:
+        if self.width == 0 or self.height == 0:
             return (0)
 
     @property
