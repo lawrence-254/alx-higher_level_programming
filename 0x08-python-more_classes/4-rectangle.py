@@ -1,10 +1,12 @@
+
 #!/usr/bin/python3
-"""Rectangle class object"""
+
+"""Rectangle class object."""
 
 
 class Rectangle:
     def __init__(self, width=0, height=0):
-        """Initialize the Rectangle object with width and height."""
+        """Rectangle object with width and height."""
         self.width = width
         self.height = height
 
