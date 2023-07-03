@@ -16,8 +16,6 @@ class Rectangle:
         self.width = width
         self.height = height
 
-        if self.width == 0 or self.height == 0:
-            return (0)
 
     @property
     def width(self):
