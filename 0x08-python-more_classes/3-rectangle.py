@@ -19,7 +19,7 @@ class Rectangle:
     @property
     def width(self):
         """A get function for the width of the rectangle"""
-        return (self.__width)
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -33,7 +33,7 @@ class Rectangle:
     @property
     def height(self):
         """A get function for the width of the rectangle"""
-        return (self.__height)
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -46,21 +46,21 @@ class Rectangle:
 
     def area(self):
         """Returns the area occupied by the rectangle"""
-        return (self.__width * self.__height)
+        return self.__width * self.__height
 
     def perimeter(self):
         """Returns th total distance around the rectangle"""
         if self.__width == 0 or self.__height == 0:
-            return (0)
-        return ((self.__width * 2) + (self.__height * 2))
+            return 0
+        return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
         """print the rectangle with the character #"""
 
         if self.__width == 0 or self.__height == 0:
-            return ("")
+            return ""
 
         rectangle_str = ""
         for _ in range(self.__height):
             rectangle_str += "#" * self.__width + "\n"
-        return (rectangle_str.rstrip())
+        return rectangle_str.rstrip()
