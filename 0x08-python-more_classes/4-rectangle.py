@@ -50,11 +50,15 @@ class Rectangle:
         """Return a string representation of the rectangle."""
         if self.__width == 0 or self.__height == 0:
             return ""
-        rectangle_str = ""
-        for _ in range(self.__height):
-            rectangle_str += "#" * self.__width + "\n"
-        return rectangle_str.rstrip()
-
+        rectangle_str = []
+        for i in range(self.__height):
+            [rectangle_str.append("#") for j in range(self.__width)]
+            if i != self.__height - 1:
+                rectangle_str.append("\n")
+        return ("".join(rectangle_str)
+            
     def __repr__(self):
         """Return a string representation of the rectangle for recreating a new instance."""
-        return f"Rectangle({self.__width}, {self.__height})"
+        rectangle_str = "Rectangle(" + str(self.__width)
+        rectangle_str += ", " + str(self.__height) + ")"
+        return rectangle_str
