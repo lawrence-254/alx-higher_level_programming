@@ -2,6 +2,6 @@
 """A function def copy_list(l)"""
 
 
-def copy_list(l):
+def copy_list(line):
     """Returns a copy of a list"""
-    return l[:]
+    return line[:]
