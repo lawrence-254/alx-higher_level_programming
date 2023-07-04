@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """Defines a Rectangle with dimensions."""
 
@@ -34,7 +33,6 @@ class Rectangle:
     def height(self):
         """A get function for the width of the rectangle."""
         return self.__height
-
 
     @height.setter
     def height(self, value):

@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 
 """Rectangle class object."""
@@ -55,10 +54,10 @@ class Rectangle:
             [rectangle_str.append("#") for j in range(self.__width)]
             if i != self.__height - 1:
                 rectangle_str.append("\n")
-        return ("".join(rectangle_str)
-            
+        return ("".join(rectangle_str))
+
     def __repr__(self):
-        """Return a string representation of the rectangle for recreating a new instance."""
+        """Return string representing the rectangle for recreating instance."""
         rectangle_str = "Rectangle(" + str(self.__width)
         rectangle_str += ", " + str(self.__height) + ")"
         return rectangle_str
