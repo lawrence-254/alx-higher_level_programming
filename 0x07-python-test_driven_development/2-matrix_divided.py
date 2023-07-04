@@ -22,7 +22,8 @@ def matrix_divided(matrix, div):
     """
 
     """Check if matrix is a list of lists of integers or floats"""
-    if not isinstance(matrix, list) or not all(isinstance(row, list) for row in matrix):
+    if not isinstance(matrix, list) or
+    not all(isinstance(row, list) for row in matrix):
         raise TypeError(
             "matrix must be a matrix (list of lists) of integers/floats")
 
@@ -40,4 +41,3 @@ def matrix_divided(matrix, div):
         new_matrix.append(new_row)
 
     return new_matrix
-
