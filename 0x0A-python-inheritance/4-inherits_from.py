@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""Defines object is an instance of a class that inherited from"""
+"""Defines object used for checking inheritance"""
 
 
-def is_kind_of_class(obj, a_class):
+def inherits_from(obj, a_class):
     """Checks for inheritance
 
     Args:
@@ -10,9 +10,9 @@ def is_kind_of_class(obj, a_class):
         a_class (type)
 
     Returns:
-        True if confirmed
+        True if inherited
         else False
     """
-    if isinstance(obj, a_class):
+    if issubclass(type(obj), a_class) and type(obj) != a_class:
         return True
     return False
