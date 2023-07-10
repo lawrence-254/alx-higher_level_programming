@@ -23,3 +23,10 @@ class MyList(list):
     >>> my_list.print_sorted()
     [-9, -7, -5, -2, -1, 0]
     """
+
+    def print_sorted(self):
+        """
+        Prints the list in sorted (ascending) order.
+        """
+        print(sorted(self))
+
