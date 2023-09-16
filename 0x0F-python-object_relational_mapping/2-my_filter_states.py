@@ -14,23 +14,29 @@ if __name__ == "__main__":
 
     """adding credentials"""
     user_name, password, database, match = argv[1], argv[2], argv[3], argv[4]
-    db = MySQLdb.connect(
-            host="localhost",
-            user=user_name,
-            passwd=password,
-            db=database,
-            port=3306
-            )
-    db_selector = db.cursor()
-    query = """
-    SELECT * from states
-    WHERE name = '{}'
-    ORDER BY states.id ASC
-    """.format(match)
-    db_selector.execute(query)
-    rows = db_selector.fetchall()
-    for row in rows:
-        print(row)
+    try:
+        db = MySQLdb.connect(
+                host="localhost",
+                user=user_name,
+                passwd=password,
+                db=database,
+                port=3306
+                )
+        db_selector = db.cursor()
+        query = """
+        SELECT * FROM states
+        WHERE name = '{}'
+        ORDER BY states.id ASC
+        """.format(match)
 
-    db_selector.close()
-    db.close()
+        db_selector.execute(query)
+        rows = db_selector.fetchall()
+        for row in rows:
+            print(row)
+
+    except MySQLdb.Error as e:
+        print("MySQL Error:", e)
+
+    finally:
+        db_selector.close()
+        db.close()
