@@ -7,9 +7,9 @@ from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-username, password, db_name = argv[1], argv[2], argv[3]
 
 if __name__ == "__main__":
+    username, password, db_name = argv[1], argv[2], argv[3]
     engine = create_engine(
             f'mysql+mysqldb://{username}:{password}@localhost:3306/{db_name}'
             )
