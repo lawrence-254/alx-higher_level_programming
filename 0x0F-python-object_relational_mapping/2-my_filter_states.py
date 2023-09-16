@@ -26,8 +26,8 @@ if __name__ == "__main__":
     SELECT * from states
     WHERE name = '{}'
     ORDER BY states.id ASC
-    """.format(match)
-    db_selector.execute(query)
+    """
+    db_selector.execute(query, (match,))
     rows = db_selector.fetchall()
     for row in rows:
         print("{}".format(row))
