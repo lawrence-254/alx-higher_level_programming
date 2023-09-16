@@ -24,7 +24,7 @@ if __name__ == "__main__":
     db_selector = db.cursor()
     query = """
     SELECT * from states
-    WHERE name = '{}'
+    WHERE name = %s
     ORDER BY states.id ASC
     """.format(match)
     db_selector.execute(query)
