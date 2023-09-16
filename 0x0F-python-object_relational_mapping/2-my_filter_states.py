@@ -24,13 +24,13 @@ if __name__ == "__main__":
     db_selector = db.cursor()
     query = """
     SELECT * from states
-    WHERE name = %s
+    WHERE name = '{}'
     ORDER BY states.id ASC
     """.format(match)
     db_selector.execute(query)
     rows = db_selector.fetchall()
     for row in rows:
-        print("{}".format(row))
+        print(row)
 
     db_selector.close()
     db.close()
