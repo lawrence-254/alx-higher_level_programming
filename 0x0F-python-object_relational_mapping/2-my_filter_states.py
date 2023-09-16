@@ -25,7 +25,7 @@ if __name__ == "__main__":
         db_selector = db.cursor()
         query = """
         SELECT * FROM states
-        WHERE name = '{}'
+        WHERE name LIKE BINARY '%{}%'
         ORDER BY states.id ASC
         """.format(match)
 
