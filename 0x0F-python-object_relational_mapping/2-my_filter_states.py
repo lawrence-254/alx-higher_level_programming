@@ -13,7 +13,7 @@ if __name__ == "__main__":
         exit(1)
 
     """adding credentials"""
-    user_name, password, database,  match = argv[1], argv[2], argv[3], argv[4]
+    user_name, password, database, match = argv[1], argv[2], argv[3], argv[4]
     db = MySQLdb.connect(
             host="localhost",
             user=user_name,
