@@ -3,3 +3,4 @@
 #and displays the size of the body of the response
 
 curl -s -o "$1" | wc -c
+
